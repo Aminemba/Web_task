@@ -9,6 +9,6 @@ server = WEBrick::HTTPServer.new({
 }
 server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'webtask.html.erb')
 server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')
-# この一行を追記
 server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
+server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goyaall.rb')
 server.start
